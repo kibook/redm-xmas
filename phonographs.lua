@@ -14,7 +14,18 @@ local Phonographs = {
 
 function GetListenerCoords()
 	local cam = GetRenderingCam()
-	return cam == -1 and GetEntityCoords(PlayerPedId()) or GetCamCoord(cam)
+
+	if cam == -1 then
+		local ped = PlayerPedId()
+
+		if IsPedDeadOrDying(ped) then
+			return GetGameplayCamCoord()
+		else
+			return GetEntityCoords(ped)
+		end
+	else
+		return GetCamCoord(cam)
+	end
 end
 
 CreateThread(function()
