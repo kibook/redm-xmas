@@ -12,12 +12,16 @@ local Phonographs = {
 	vector3(2935.13, 1274.38, 43.65), -- Annesburg
 }
 
+function GetListenerCoords()
+	local cam = GetRenderingCam()
+	return cam == -1 and GetEntityCoords(PlayerPedId()) or GetCamCoord(cam)
+end
+
 CreateThread(function()
 	while true do
 		Wait(100)
 
-		local cam = GetRenderingCam()
-		local pos = cam == -1 and GetGameplayCamCoord() or GetCamCoord(cam)
+		local pos = GetListenerCoords()
 
 		local minDistance = nil
 
