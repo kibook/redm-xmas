@@ -4,8 +4,8 @@ CreateThread(function()
 	exports.weathersync:SetWeatherPattern({
 		['snowlight'] = {
 			['snow'] = 20,
-			['snowlight'] = 20,
-			['clouds'] = 60
+			['snowlight'] = 30,
+			['clouds'] = 50
 		},
 		['snow'] = {
 			['snow'] = 20,
