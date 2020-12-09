@@ -1,7 +1,7 @@
 CreateThread(function()
 	Wait(0)
 
-	exports.weathersync:SetWeatherPattern({
+	exports.weathersync:setWeatherPattern({
 		['snowlight'] = {
 			['snow'] = 20,
 			['snowlight'] = 30,
@@ -30,7 +30,7 @@ CreateThread(function()
 		}
 	})
 
-	exports.weathersync:SetWeather('snowlight', 10.0, false, true)
+	exports.weathersync:setWeather('snowlight', 10.0, false, true)
 end)
 
 AddEventHandler('onResourceStop', function(resource)
@@ -38,6 +38,6 @@ AddEventHandler('onResourceStop', function(resource)
 		return
 	end
 
-	exports.weathersync:ResetWeatherPattern()
-	exports.weathersync:ResetWeather()
+	exports.weathersync:resetWeatherPattern()
+	exports.weathersync:resetWeather()
 end)
