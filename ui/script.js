@@ -1,7 +1,10 @@
+const maxVolume = 50;
+const attenuationFactor = 8.0;
+
 function updateDistance(distance) {
 	var music = document.getElementById('music');
 
-	var volume = (50 - distance * 4) / 100;
+	var volume = ((100 - distance * attenuationFactor) / 100) * (maxVolume / 100);
 
 	if (volume > 0) {
 		music.volume = volume;
