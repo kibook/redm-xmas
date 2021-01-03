@@ -37,7 +37,7 @@ CreateThread(function()
 		local minDistance = nil
 
 		for _, phonograph in ipairs(Phonographs) do
-			local distance = GetDistanceBetweenCoords(pos.x, pos.y, pos.z, phonograph.x, phonograph.y, phonograph.z, true)
+			local distance = #(pos - phonograph)
 
 			if not minDistance or distance < minDistance then
 				minDistance = distance
