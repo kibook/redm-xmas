@@ -29,4 +29,6 @@
   <Object Hash="-974361766" Position_x="2631.4692382812" Position_y="-1228.2664794922" Position_z="52.380390167236" Rotation_x="0.0" Rotation_Y="0.0" Rotation_z="180.0"/>
   <Object Hash="-1816726898" Position_x="2935.1291503906" Position_y="1274.3802490234" Position_z="43.652435302734" Rotation_x="0.0" Rotation_Y="0.0" Rotation_z="-64.789901733398"/>
   <Object Hash="-974361766" Position_x="2935.2788085938" Position_y="1275.0834960938" Position_z="43.652854919434" Rotation_x="0.0" Rotation_Y="0.0" Rotation_z="-65.262664794922"/>
+  <Object Hash="-280509335" Position_x="3347.1494140625" Position_y="-642.96032714844" Position_z="44.292949676514" Rotation_x="0.0" Rotation_y="0.0" Rotation_z="101.26830291748" Collision="true" Visible="true"/>
+  <Object Hash="977130056" Position_x="3347.5412597656" Position_y="-642.9287109375" Position_z="44.29468536377" Rotation_x="-19.999950408936" Rotation_y="0.0" Rotation_z="103.72173309326" Collision="true" Visible="true"/>
 </Map>
