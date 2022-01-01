@@ -1,5 +1,6 @@
-const maxVolume = 50;
 const attenuationFactor = 8.0;
+
+var maxVolume = 50;
 
 function updateDistance(distance) {
 	var music = document.getElementById('music');
@@ -27,5 +28,14 @@ window.addEventListener('message', event => {
 		case 'updateDistance':
 			updateDistance(event.data.distance);
 			break;
+		case 'setMaxVolume':
+			maxVolume = event.data.volume;
+			break;
 	}
+});
+
+window.addEventListener('load', event => {
+	fetch(`https://${GetParentResourceName()}/init`)
+	.then(resp => resp.json())
+	.then(resp => maxVolume = resp);
 });

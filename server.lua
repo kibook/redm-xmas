@@ -41,3 +41,17 @@ AddEventHandler('onResourceStop', function(resource)
 	exports.weathersync:resetWeatherPattern()
 	exports.weathersync:resetWeather()
 end)
+
+RegisterCommand("xmas_vol", function(source, args, raw)
+	local volume = tonumber(args[1])
+
+	if volume == nil then
+		volume = 50
+	elseif volume > 100 then
+		volume = 100
+	elseif volume < 0 then
+		volume = 0
+	end
+
+	TriggerClientEvent("xmas:setMaxVolume", source, volume)
+end, true)

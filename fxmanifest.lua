@@ -17,5 +17,6 @@ ui_page 'ui/index.html'
 objectloader_map 'xmas.xml'
 
 server_script 'server.lua'
+client_script 'client.lua'
 client_script 'phonographs.lua'
 client_script 'trains.lua'
